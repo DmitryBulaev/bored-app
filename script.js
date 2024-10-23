@@ -6,8 +6,9 @@ fetch("https://dog.ceo/api/breeds/image/random")
     }
     const imgSrc = res.message;
 
-    document.getElementById("imgArea").innerHTML = `<img class="image"
-                                                         src="${imgSrc}" 
-                                                         alt="Картинка с собакой"
-                                                    >`;
+    document.getElementById("imgArea").innerHTML = `
+      <img class="image"                                                 
+      src="${imgSrc}"                                                 
+      alt="Картинка с собакой"                                           
+    >`;
   });
