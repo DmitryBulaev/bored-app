@@ -1,14 +1,11 @@
-fetch("https://dog.ceo/api/breeds/image/random")
-  .then((response) => response.json())
-  .then((res) => {
-    if (res.status !== "success") {
-      return;
-    }
-    const imgSrc = res.message;
+const actionBtnNode = document.getElementById("actionBtn");
+const searchTextNode = document.getElementById("searchText");
 
-    document.getElementById("imgArea").innerHTML = `
-      <img class="image"                                                 
-      src="${imgSrc}"                                                 
-      alt="Картинка с собакой"                                           
-    >`;
-  });
+actionBtnNode.addEventListener("click", () => {
+  fetch("https://api.adviceslip.com/advice")
+    .then((response) => response.json())
+    .then((res) => {
+      searchTextNode.innerHTML = `${res.slip.advice}`;
+      document.body.classList.add("body-response");
+    });
+});
