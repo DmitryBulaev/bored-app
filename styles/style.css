@@ -8,7 +8,7 @@ body {
   font-family: "Gill Sans", sans-serif;
 }
 
-body.body-response {
+.body-response {
   background: linear-gradient(#7628a7, white);
   background-repeat: no-repeat;
   background-attachment: fixed;
